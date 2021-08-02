@@ -4,6 +4,7 @@ let forCast = require("./utils/forecast");
 const path = require("path");
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 3000;
 const hbs = require("hbs");
 const port = 3000;
 
@@ -77,7 +78,7 @@ app.get("/about/*", (req, res) => {
 //     res.send("Home page");
 //     // console.log(req)
 // })
-app.listen(3000, () => {
-    console.log("Server Started");
+app.listen(port, () => {
+    console.log("Server Started at " + port);
 })
 

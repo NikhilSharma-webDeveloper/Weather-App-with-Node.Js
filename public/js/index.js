@@ -27,7 +27,7 @@ const secondP = document.querySelector("#second_p");
 webForm.addEventListener("submit", (event) => {
     event.preventDefault();
     firstP.innerText = "Loading..........";
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then((response) => {
+    fetch(`/weather?address=${search.value}`).then((response) => {
         response.json().then((data) => {
             firstP.innerText = null;
             if (data.error) {
